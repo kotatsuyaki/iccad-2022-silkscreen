@@ -1,0 +1,9 @@
+# temporaries
+.cache/
+.direnv/
+
+# manual build directory
+build/
+
+# nix build result
+result
