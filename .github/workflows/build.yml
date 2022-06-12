@@ -11,3 +11,8 @@ jobs:
       - uses: cachix/install-nix-action@v17
       - name: Build package
         run: nix build "git+file://$PWD?submodules=1&shallow=1"
+      - run: cp ./result/bin/main ./main
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Static Binary
+          path: ./main
