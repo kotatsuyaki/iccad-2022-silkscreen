@@ -26,8 +26,8 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-const char* const INPUT_FILENAME = "Problem.txt";
-const char* const OUTPUT_FILENAME = "Result.txt";
+const char* const INPUT_FILENAME = "./Problem.txt";
+const char* const OUTPUT_FILENAME = "./Result.txt";
 constexpr double scale = 10000.0;
 constexpr int64_t extra_gap = 100;
 
@@ -132,8 +132,8 @@ int64_t scaled_int(const string& s) {
 
 double scaled_dbl(int64_t n) { return static_cast<double>(n) / scale; }
 
-int main(int argc, char** argv) try {
-  ifstream infile(argv[1]);
+int main() try {
+  ifstream infile(INPUT_FILENAME);
 
   int64_t asm_gap = 0, copper_gap = 0, silk_len = 0;
 
